@@ -1,3 +1,6 @@
+import os
+
+
 def pedir_entero(mensaje):
     correcto = False
     num = 0
@@ -9,3 +12,6 @@ def pedir_entero(mensaje):
             print('Error, introduce un numero entero')
 
     return num
+
+
+def borrar_pantalla(): return os.system("cls")

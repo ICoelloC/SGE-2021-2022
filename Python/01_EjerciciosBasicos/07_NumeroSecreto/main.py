@@ -3,7 +3,7 @@ import utilidades
 
 intentos = 1
 numero_secreto = utilidades.pedir_entero('Introduce el número secreto: ')
-os.system('cls')
+utilidades.borrar_pantalla()
 
 adivinado = False
 
