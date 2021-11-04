@@ -3,8 +3,7 @@ import utilidades
 
 intentos = 1
 numero_secreto = utilidades.pedir_entero('Introduce el número secreto: ')
-utilidades.borrar_pantalla()
-
+utilidades.borrarPantalla()
 adivinado = False
 
 while not adivinado:

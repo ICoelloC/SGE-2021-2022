@@ -14,4 +14,4 @@ def pedir_entero(mensaje):
     return num
 
 
-def borrar_pantalla(): return os.system("cls")
+borrarPantalla = lambda: os.system ("cls")
