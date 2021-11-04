@@ -1,7 +1,7 @@
 class Poligono():
     def __init__(self, *args):
         self.lados = args
-        self.n_lados = len(self.lados)
+        self.__nlados = len(self.lados)
 
     @property
     def lados(self):
@@ -12,13 +12,14 @@ class Poligono():
         self.__lados = lados
 
     @property
-    def n_lados(self):
-        return self.__n_lados
+    def nlados(self):
+        return self.__nlados
 
     def __str__(self):
         clase = type(self).__name__
-        msg = '{0} de {1} lados con longitudes {2}'
-        return msg.format(clase, self.n_lados, self.lados)
+        msg = "{0} de {1} lados con longitudes {2}"
+        return msg.format(clase, self.nlados, self.lados)
 
     def perimetro(self):
+        """Devuelve el perímetro del polígono"""
         return sum(self.lados)

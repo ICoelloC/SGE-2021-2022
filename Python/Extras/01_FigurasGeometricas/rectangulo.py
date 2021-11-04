@@ -3,6 +3,7 @@ from poligono import Poligono
 
 class Rectangulo(Poligono):
     def __init__(self, base, altura):
+        super().__init__(base, base, altura, altura)
         self.base = base
         self.altura = altura
 
