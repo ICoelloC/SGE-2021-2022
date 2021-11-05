@@ -1,15 +1,20 @@
 import os
 import utilidades
+import random
 
 intentos = 1
 numero_secreto = utilidades.pedir_entero('Introduce el número secreto: ')
-utilidades.borrarPantalla()
+utilidades.borrar_pantalla()
 adivinado = False
 
 while not adivinado:
-    numero = utilidades.pedir_entero('Adivina el número: ')
+    numero = random.uniform(1,100)
     if (numero != numero_secreto):
         intentos += 1
+        if (numero > numero_secreto):
+            print('El número es menor')
+        else:
+            print('El número es mayor')
         print('Intentalo de nuevo')
     else:
         adivinado = True
