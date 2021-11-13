@@ -9,5 +9,5 @@ def pedir_entero(mensaje):
     return numero
 
 
-def son_iguales(lista,lista2):
+def son_iguales(lista, lista2):
     return lista == lista2

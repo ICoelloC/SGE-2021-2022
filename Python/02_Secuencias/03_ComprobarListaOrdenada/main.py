@@ -10,12 +10,11 @@ while not salir:
     if continuar in ["X", "x"]:
         salir = True
 
-lista2=lista[:]
+lista2=lista.copy()
 
 lista2.sort()
-print(lista2)
 
-if (utilidades.son_iguales(lista, lista2)):
+if (lista == lista2):
     print("La lista está ordenada")
 else:
     print("La lista no está ordenada")
