@@ -15,6 +15,10 @@ def iniciales(cadena):
     lista = cadena.split(" ")
     return "".join(palabra[0] for palabra in lista)
 
+def letra_final(cadena):
+    lista = cadena.split(" ")
+    return "".join(palabra[-1] for palabra in lista)
+
 
 
 def capitalizar(cadena):
