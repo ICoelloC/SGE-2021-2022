@@ -5,7 +5,7 @@ def pedir_cadena(mensaje):
         if cadena != "":
             valido = True
         else:
-            print("Error, formato no valido")
+            raise ValueError("No se ha introducido ningún valor")
     return cadena
 
 

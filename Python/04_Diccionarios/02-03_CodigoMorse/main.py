@@ -12,7 +12,13 @@ def menu():
         opcion = ut.pedir_entero("Elige una opción: ")
         if opcion == 1:
             palabra = input("Palabra:")
-            lista_codigos = ut.generar_lista_codigos(palabra)
+            '''
+            En first coge la primera palabra.
+            En middle coge todas las palabras que hay entre la primera y la última.
+            En last coge la última palabra.
+            '''
+            first, *middle, last = palabra.split()
+            lista_codigos = ut.generar_lista_codigos(first)
             print(" ".join(lista_codigos))
 
         elif opcion == 2:

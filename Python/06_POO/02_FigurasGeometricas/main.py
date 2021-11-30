@@ -6,14 +6,15 @@ def menu():
     salir = False
 
     while not salir:
-        print("Qué desea introducir:")
-        print("1. Triángulo")
-        print("2. Rectángulo")
-        print("3. Circunferencia")
-        print("4. Cubo") # no funciona
-        print("5. Cono")
-        print("6. Cilindro")# no funciona
-        print("0. Salir")
+        print("""
+        1. Triángulo
+        2. Rectángulo
+        3. Circunferencia
+        4. Cubo #TODO solucionar errores
+        5. Cono
+        6. Cilindro #TODO solucionar errores
+        0. Salir
+        """)
         opcion = utilidades.pedir_entero("Introduzca una opción: ")
 
         if opcion == 0:
