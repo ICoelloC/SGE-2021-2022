@@ -1,0 +1,25 @@
+Index: Python/05_ProgramacionEstructuradaModular/01_Alumnos/main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import utilidades as ut\r\n\r\n\r\ndef menu_principal():\r\n    salir = False\r\n    dicc = {}\r\n    while not salir:\r\n        print(\"\"\"\r\n        1. Añadir nuevo alumno\r\n        2. Mostrar lista de alumnos\r\n        3. Buscar alumno\r\n        4. Borrar alumno\r\n        5. Salir\r\n        \"\"\")\r\n        opcion = ut.pedir_entero(\"Elige una opción: \")\r\n\r\n        if opcion == 1:\r\n            alumno = ut.pedir_datos_alumno()\r\n            dicc = alumno.to_dictionary(dicc)\r\n\r\n        elif opcion == 2:\r\n            ut.mostrar_alumnos(dicc)\r\n\r\n        elif opcion == 3:\r\n            \"\"\" dni = input(\"Introduce el DNI del alumno: \")\r\n            alumno = ut.buscar_alumno(dicc, dni = dni) \"\"\"\r\n            alumno = ut.buscar(dicc)\r\n            if alumno:\r\n                print(alumno)\r\n            else:\r\n                print(\"Alumno no encontrado\")\r\n\r\n        elif opcion == 4:\r\n            dni = input(\"Introduce el DNI del alumno: \")\r\n            ut.borrar_alumno(dicc, dni)\r\n\r\n        elif opcion == 5:\r\n            salir = True\r\n\r\n        else:\r\n            print(\"Opción incorrecta\")\r\n\r\nmenu_principal()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Python/05_ProgramacionEstructuradaModular/01_Alumnos/main.py b/Python/05_ProgramacionEstructuradaModular/01_Alumnos/main.py
+--- a/Python/05_ProgramacionEstructuradaModular/01_Alumnos/main.py	(revision c05cc42c37a9bd073d98bce8b4a96d45eddad13d)
++++ b/Python/05_ProgramacionEstructuradaModular/01_Alumnos/main.py	(date 1638285753727)
+@@ -22,8 +22,6 @@
+             ut.mostrar_alumnos(dicc)
+ 
+         elif opcion == 3:
+-            """ dni = input("Introduce el DNI del alumno: ")
+-            alumno = ut.buscar_alumno(dicc, dni = dni) """
+             alumno = ut.buscar(dicc)
+             if alumno:
+                 print(alumno)
+@@ -40,4 +38,5 @@
+         else:
+             print("Opción incorrecta")
+ 
++
+ menu_principal()
