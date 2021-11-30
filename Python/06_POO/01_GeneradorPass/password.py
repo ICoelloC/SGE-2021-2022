@@ -1,5 +1,6 @@
 from random import choice
 
+
 class Pass():
     def __init__(self, long=8):
         self.longitud = long
@@ -11,12 +12,11 @@ class Pass():
 
     @longitud.setter
     def longitud(self, long):
-        if long>0:
+        if long > 0:
             self.__longitud = long
         else:
             self.__longitud = 8
             raise ValueError("La longitud tiene que ser positiva mayor que cero")
-
 
     @property
     def valor(self):
@@ -50,7 +50,3 @@ class Pass():
             elif a in num:
                 nnums += 1
         return nmays > 2 and nmins > 1 and nnums > 5
-
-
-
-

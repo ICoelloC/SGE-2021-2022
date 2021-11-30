@@ -1,38 +1,38 @@
 from password import Pass
 
+
 def pedir_entero(msg):
-    valorcorrecto = False
-    npassword = 0
-    while not valorcorrecto:
+    valor_correcto = False
+    numero = 0
+    while not valor_correcto:
         try:
-            npassword = input(msg)
-            npassword = int(npassword)
-            valorcorrecto = True
+            numero = input(msg)
+            numero = int(numero)
+            valor_correcto = True
         except ValueError:
             print("La longitud debe ser un entero")
-    return npassword
+    return numero
 
 
 def generar_passwords():
-    npassword = pedir_entero("Introduce el número de password que deseas generar: ")
-
-    listapassword = []
+    num_pass = pedir_entero("Introduce el número de password que deseas generar: ")
+    lista_pass = []
     long = -1
     msg = "Longitud de la contraseña {0} (-1 para longitud por defecto): "
-    for i in range(npassword):
-        valorcorrecto = False
-        while not valorcorrecto:
+    for i in range(num_pass):
+        valido = False
+        while not valido:
             long = input(msg.format(str(i)))
             try:
                 long = int(long)
-                valorcorrecto = True
+                valido = True
             except ValueError:
                 print("La longitud debe ser un entero")
         if long == -1:
-            listapassword.append(Pass())
+            lista_pass.append(Pass())
         else:
-            listapassword.append(Pass(long))
-    return listapassword
+            lista_pass.append(Pass(long))
+    return lista_pass
 
 
 def mostrar_lista_pass(lista_pass):
