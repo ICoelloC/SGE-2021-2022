@@ -49,4 +49,4 @@ class Pass:
                 nmays += 1
             elif a in num:
                 nnums += 1
-        return nmays > 2 and nmins > 1 and nnums > 5
+        return nmays >= 2 and nmins >= 1 and nnums >= 5
