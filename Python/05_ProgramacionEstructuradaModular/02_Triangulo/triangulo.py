@@ -6,9 +6,6 @@ class Triangulo:
         self.punto1 = Punto(punto1_x, punto1_y)
         self.punto2 = Punto(punto2_x, punto2_y)
         self.punto3 = Punto(punto3_x, punto3_y)
-        self.lado1 = self.punto1.distancia(self.punto2)
-        self.lado2 = self.punto2.distancia(self.punto3)
-        self.lado3 = self.punto3.distancia(self.punto1)
         self.perimetro = self.calcular_perimetro()
         self.area = self.calcular_area()
 
@@ -61,30 +58,6 @@ class Triangulo:
         self.punto3.y = valor
 
     @property
-    def lado1(self):
-        return self.lado1
-
-    @lado1.setter
-    def lado1(self, valor):
-        self.lado1 = valor
-
-    @property
-    def lado2(self):
-        return self.lado2
-
-    @lado2.setter
-    def lado2(self, valor):
-        self.lado2 = valor
-
-    @property
-    def lado3(self):
-        return self.lado3
-
-    @lado3.setter
-    def lado3(self, valor):
-        self.lado3 = valor
-
-    @property
     def perimetro(self):
         return self.perimetro
 
@@ -101,11 +74,11 @@ class Triangulo:
         self.area = valor
 
     def calcular_perimetro(self):
-        return self.lado1 + self.lado2 + self.lado3
+        return self.punto1.distancia(self.punto2) + self.punto2.distancia(self.punto3) + self.punto3.distancia(self.punto1)
 
     def calcular_area(self):
         s = self.perimetro() / 2
-        return (s * (s - self.lado1) * (s - self.lado2) * (s - self.lado3)) ** 0.5
+        return (s * (s - self.punto1.distancia(self.punto2)) * (s - self.punto2.distancia(self.punto3)) * (s - self.punto3.distancia(self.punto1))) ** 0.5
 
     def __str__(self):
         clase = type(self).__name__
