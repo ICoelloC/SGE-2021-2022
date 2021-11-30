@@ -1,4 +1,4 @@
-class Poligono():
+class Poligono:
     def __init__(self, *args):
         self.lados = args
         self.__nlados = len(self.lados)

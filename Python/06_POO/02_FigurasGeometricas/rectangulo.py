@@ -32,4 +32,3 @@ class Rectangulo(Poligono):
 
     def perimetro(self):
         return 2 * (self.base + self.altura)
-

@@ -3,7 +3,7 @@ from rectangulo import Rectangulo
 import math
 
 
-class Cilindro():
+class Cilindro:
     def __init__(self, radio, altura):
         self.circunferencia = Circunferencia(radio)
         self.rectangulo = Rectangulo(2 * math.pi * radio, altura)

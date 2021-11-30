@@ -1,7 +1,7 @@
 from random import choice
 
 
-class Pass():
+class Pass:
     def __init__(self, long=8):
         self.longitud = long
         self.generador_pass()
@@ -30,7 +30,7 @@ class Pass():
 
     def generador_pass(self):
         valores = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<=>@#%&+"
-        self.__valor = "";
+        self.__valor = ""
         for _ in range(self.longitud):
             self.__valor += choice(valores)
 
