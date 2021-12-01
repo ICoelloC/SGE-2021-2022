@@ -1,5 +1,5 @@
 import random
-from constantes import *
+from constantes import DIR_IZQDA, ENERGIA_COMER, ATACAR, COMER, DESPLAZARSE
 
 
 class Dinosario:
