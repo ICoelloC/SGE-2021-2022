@@ -8,7 +8,7 @@ def is_dni_valido(dni):
 def pedir_entero(mensaje):
     correcto = False
     num = 0
-    while(not correcto):
+    while not correcto:
         try:
             num = int(input(mensaje))
             correcto = True
@@ -28,45 +28,47 @@ def pedir_datos_alumno():
     return Alumno(dni, nombre, apellidos, edad, genero, curso)
 
 
-def mostrar_alumnos(dict):
-    for alumno in dict:
-        print(alumno,'-->', dict[alumno])
+def mostrar_alumnos(dicc):
+    for alumno in dicc:
+        print(alumno, '-->', dicc[alumno])
 
 
-def buscar_alumno(dict, **kwargs):
+def buscar_alumno(dicc, **kwargs):
     resultado_busqueda = []
     if "dni" in kwargs.keys() and kwargs["dni"] != "":
         dni_alumno_busq = kwargs["dni"]
-        alumno = dict[dni_alumno_busq];
-        resultado_busqueda.append(alumno);
+        alumno = dicc[dni_alumno_busq]
+        resultado_busqueda.append(alumno)
     else:
         alumno_buscado = True
-        for dni, alumno_dict in dict.items():
+        for dni, alumno_dict in dicc.items():
             for name, value in kwargs.items():
                 print(name)
                 print(value)
-                if alumno_buscado and value != "" and alumno_dict[name] != value: 
+                if alumno_buscado and value != "" and alumno_dict[name] != value:
                     alumno_buscado = False
             if alumno_buscado:
                 resultado_busqueda.append({dni: alumno_dict})
             else:
                 alumno_buscado = True
-    return resultado_busqueda;
+    return resultado_busqueda
 
-def borrar_alumno(dict, dni):
-    if dni in dict:
-        del dict[dni]
+
+def borrar_alumno(dicc, dni):
+    if dni in dicc:
+        del dicc[dni]
     else:
         print("Alumno no encontrado")
 
-def buscar(dict):
+
+def buscar(dicc):
     dni = input('Buscar por DNI: ')
     nombre = input("Buscar por nombre: ")
     apellidos = input("Buscar por apellidos: ")
     edad = input("Buscar por edad: ")
     genero = input("Buscar por genero: ")
     curso = input("Buscar por curso: ")
-    resultado = buscar_alumno(dict, dni = dni,nombre =  nombre, apellidos = apellidos, edad = edad,genero =  genero, curso = curso)
+    resultado = buscar_alumno(dicc, dni=dni, nombre=nombre, apellidos=apellidos, edad=edad, genero=genero, curso=curso)
     print("El resultado de la búsqueda es: ")
     for alumno in resultado:
         print(alumno)

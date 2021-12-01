@@ -16,7 +16,8 @@ class Pass:
             self.__longitud = long
         else:
             self.__longitud = 8
-            raise ValueError("La longitud tiene que ser positiva mayor que cero")
+            raise ValueError(
+                "La longitud tiene que ser positiva mayor que cero")
 
     @property
     def valor(self):
