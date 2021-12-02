@@ -1,9 +1,10 @@
 from dinosaurio import Dinosaurio
 from constantes import HERBIVORO, POSIB_PRESA_MANADA
 
-class Triceraptors(Dinosaurio):
 
-    POSIB_ATAQUE=0
+class Triceraptops(Dinosaurio):
+    POSIB_ATAQUE = 0
+
     def __init__(self, id, energia, pos_x, aldea):
         super().__init__(id, energia, pos_x, True, HERBIVORO, False, aldea)
 
@@ -11,8 +12,6 @@ class Triceraptors(Dinosaurio):
         super().desplazar(distancia, direccion, 5)
 
     def recibir_ataque(self, depredador):
-        # Cuando un Triceraptors recibe un ataque, al ser presa y estar en manada,
-        # tendrá 800% posibilidades de sobrevivir
         super().recibir_ataque(depredador, POSIB_PRESA_MANADA)
 
     def elegir_accion(self):

@@ -1,8 +1,10 @@
 from depredador import Depredador
 from constantes import POSIB_PRESA_SOLITARIO
 
-class Spinosaurus(Depredador):
+
+class Spinosaurio(Depredador):
     POSIB_ATAQUE = 30
+
     def __init__(self, id, energia, pos_x, aldea):
         super().__init__(id, energia, pos_x, False, True, aldea)
 

@@ -2,7 +2,7 @@ import random
 from constantes import DIR_IZQDA, ENERGIA_COMER, ATACAR, COMER, DESPLAZARSE
 
 
-class Dinosario:
+class Dinosaurio:
     def __init__(self, id, energia, pos_x, manada, alimentacion, bipedo, aldea):
         self.id = id
         self.energia = energia
