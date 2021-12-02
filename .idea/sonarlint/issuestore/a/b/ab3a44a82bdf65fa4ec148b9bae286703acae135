@@ -1,0 +1,5 @@
+
+_python:S2208"GImport only needed names or import the module and then use its members.(³İ˜¹
+_python:S2208"GImport only needed names or import the module and then use its members.(îÛêƒ
+qpython:S3776"TRefactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.(šŸæéúÿÿÿÿ
+Cpython:S5806%"+Rename this variable; it shadows a builtin.(ºŒı

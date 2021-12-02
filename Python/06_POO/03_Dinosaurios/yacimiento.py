@@ -1,5 +1,4 @@
-
-class Yacimiento():
+class Yacimiento:
 
     def __init__(self, nombre):
         self.nombre = nombre
@@ -31,20 +30,22 @@ class Yacimiento():
             d = self.dinosaurios[i]
             if d.vivo and type(d).__name__ in ["Rex", "Spinosaurus"]:
                 depredadores = True
-            i+=1
+            i += 1
         return depredadores
 
+    # Nos encargaremos de colocar a los dinosaurios según su posición en el yacimiento
     def ordenar_dinosaurios(self):
-        self.__dinosaurios.sort(key= lambda dinosaurio: dinosaurio.pos_x)
+        self.__dinosaurios.sort(key=lambda dinosaurio: dinosaurio.pos_x)
 
-    def seleccionar_dinosaurio(self, id):
+    def seleccionar_dinosaurio(self, id_dino):
+        d = None
         encontrado = False
         i = 0
         while not encontrado and i < len(self.dinosaurios):
-            if id == self.dinosaurios[i].id:
+            if id_dino == self.dinosaurios[i].id:
                 encontrado = True
                 d = self.dinosaurios[i]
-            i+=1
+            i += 1
         if not encontrado:
             raise ValueError("Dinosaurio no encontrado.")
         return d
@@ -53,6 +54,6 @@ class Yacimiento():
         self.ordenar_dinosaurios()
         clase = type(self).__name__
         msg = "{0} => Nombre: {1}\nDinosaurios: \n"
-        for p in self.dinosaurios:
-            msg += p.__str__()+"\n"
+        for dino in self.dinosaurios:
+            msg += dino.__str__() + "\n"
         return msg.format(clase, self.nombre)

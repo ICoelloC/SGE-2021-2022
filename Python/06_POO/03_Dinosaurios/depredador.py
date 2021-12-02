@@ -1,6 +1,7 @@
 from dinosaurio import Dinosaurio
 from constantes import CARNIVORO, ENERGIA_ATACAR, DIR_IZQDA, DIR_DCHA
 
+
 class Depredador(Dinosaurio):
 
     def __init__(self, id, energia, pos_x, manada, bipedo, aldea):
@@ -12,22 +13,21 @@ class Depredador(Dinosaurio):
         if self.energia < ENERGIA_ATACAR:
             raise ValueError("No puede atacar. Energía insuficiente")
         # Calculamos la energía necesaria para desplazarse a su objetivo
-        distancia = self.pos_x-presa.pos_x
-        energia_necesaria = abs(distancia)*2+ENERGIA_ATACAR
+        distancia = self.pos_x - presa.pos_x
+        energia_necesaria = abs(distancia) * 2 + ENERGIA_ATACAR
         if self.energia < energia_necesaria:
-            raise ValueError("No puede atacar. Energía insuficiente. Necesita: "+
-                             energia_necesaria+", Tiene: "+self.energia)
+            raise ValueError("No puede atacar. Energía insuficiente. Necesita: " +
+                             energia_necesaria + ", Tiene: " + self.energia)
 
-        if distancia < 0: # Nos desplazamos a la izquierda
+        if distancia < 0:  # Nos desplazamos a la izquierda
             self.desplazar(abs(distancia), DIR_IZQDA)
         else:
             self.desplazar(abs(distancia), DIR_DCHA)
         # Gastamos la energía del ataque
         self.energia -= 20
 
-        #La presa recibe el ataque
+        # La presa recibe el ataque
         presa.recibir_ataque(self)
 
     def recibir_ataque(self, depredador, posibilidades_sobrevivir):
         super().recibir_ataque(depredador, posibilidades_sobrevivir)
-
