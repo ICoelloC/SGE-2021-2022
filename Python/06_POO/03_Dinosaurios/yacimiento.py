@@ -50,7 +50,6 @@ class Yacimiento():
         return d
 
     def __str__(self):
-        """Mostrará el pueblo ordenando los dinosaurios por posición"""
         self.ordenar_dinosaurios()
         clase = type(self).__name__
         msg = "{0} => Nombre: {1}\nDinosaurios: \n"
