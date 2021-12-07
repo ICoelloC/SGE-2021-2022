@@ -37,19 +37,6 @@ class Yacimiento:
     def ordenar_dinosaurios(self):
         self.__dinosaurios.sort(key=lambda dinosaurio: dinosaurio.pos_x)
 
-    def seleccionar_dinosaurio(self, id_dino):
-        d = None
-        encontrado = False
-        i = 0
-        while not encontrado and i < len(self.dinosaurios):
-            if id_dino == self.dinosaurios[i].id:
-                encontrado = True
-                d = self.dinosaurios[i]
-            i += 1
-        if not encontrado:
-            raise ValueError("Dinosaurio no encontrado.")
-        return d
-
     def __str__(self):
         self.ordenar_dinosaurios()
         clase = type(self).__name__

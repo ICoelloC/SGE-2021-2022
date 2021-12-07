@@ -19,7 +19,7 @@ class Depredador(Dinosaurio):
             raise ValueError("No puede atacar. Energía insuficiente. Necesita: " +
                              energia_necesaria + ", Tiene: " + self.energia)
 
-        if distancia < 0:  # Nos desplazamos a la izquierda
+        if distancia < 0:  # Nos desplazamos a la izquierda.
             self.desplazar(abs(distancia), DIR_IZQDA)
         else:
             self.desplazar(abs(distancia), DIR_DCHA)

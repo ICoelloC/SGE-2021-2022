@@ -51,8 +51,6 @@ Z
 +Python/06_POO/03_Dinosaurios/spinosaurio.py,8\4\843a763c69ff0d3f9b72f5ef410afa469388d2f4
 [
 +Python/06_POO/03_Dinosaurios/triceratops.py,e\7\e75943cc32a8fd2b89f381b004a0f31261528509
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 Z
 *Python/06_POO/03_Dinosaurios/depredador.py,3\6\3644c799c2259461023143977c486becc63e9fb7
 Y
@@ -63,3 +61,5 @@ Z
 *Python/06_POO/03_Dinosaurios/yacimiento.py,c\6\c64f1ada99789583eddf09be8ffd77723f438ec7
 Z
 *Python/06_POO/03_Dinosaurios/dinosaurio.py,c\a\ca5e9a3c3fcd2d6947eb944e637940eeed748217
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
