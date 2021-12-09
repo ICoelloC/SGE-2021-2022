@@ -1,5 +1,5 @@
 from dinosaurio import Dinosaurio
-from constantes import HERBIVORO, POSIB_PRESA_MANADA
+from constantes import HERBIVORO, POSIB_PRESA_MANADA, ENERGIA_TRICE
 
 
 class Triceraptops(Dinosaurio):
@@ -9,7 +9,7 @@ class Triceraptops(Dinosaurio):
         super().__init__(id, energia, pos_x, True, HERBIVORO, False, aldea)
 
     def desplazar(self, distancia, direccion):
-        super().desplazar(distancia, direccion, 5)
+        super().desplazar(distancia, direccion, ENERGIA_TRICE)
 
     def recibir_ataque(self, depredador):
         super().recibir_ataque(depredador, POSIB_PRESA_MANADA)

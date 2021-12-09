@@ -3,12 +3,12 @@ from constantes import *
 import random
 
 
-def elegir_dinosaurio_distinto(aldea, dinosaurio):
+def elegir_presa(yac, dinosaurio):
     encontrado = False
     i = 0
     d = None
-    while not encontrado and i < len(aldea.dinosaurios):
-        d = aldea.dinosaurios[i]
+    while not encontrado and i < len(yac.dinosaurios):
+        d = yac.dinosaurios[i]
         if dinosaurio.id != d.id and d.vivo:
             encontrado = True
         else:
@@ -23,7 +23,7 @@ def simular_dinosaurios(aldea):
         if dinosaurio.vivo:
             opcion = dinosaurio.elegir_accion()
             if opcion == ATACAR:
-                presa = elegir_dinosaurio_distinto(aldea, dinosaurio)
+                presa = elegir_presa(aldea, dinosaurio)
                 if presa is not None:
                     print(dinosaurio.id + " ataca a " + presa.id)
                     dinosaurio.atacar(presa)
@@ -33,7 +33,6 @@ def simular_dinosaurios(aldea):
                 print(dinosaurio.id + " come")
                 dinosaurio.comer()
             elif opcion == DESPLAZARSE:
-                # Tenemos que elegir la dirección y las unidades
                 dir = random.randint(0, 2)
                 unidades = random.randint(1, 20)
                 if dir == 0:  # Derecha
@@ -44,15 +43,14 @@ def simular_dinosaurios(aldea):
                     dinosaurio.desplazar(unidades, DIR_IZQDA)
 
 
-yacimiento = FactroriaYacimiento.crear_mundo("Homer", 5, 2, 2)
 salir = False
-while not salir or yacimiento.hay_depredadores():
+yacimiento = FactroriaYacimiento.crear_mundo("Homer", 5, 2, 2)
+while not salir or yacimiento.hay_cazadores():
     print(yacimiento)
     simular_dinosaurios(yacimiento)
     parar = input("Desea parar (S/N): ")
-    if parar == "S" or parar == "s":
+    if parar in ["S", "s"]:
         salir = True
 
 print(yacimiento)
-if not yacimiento.hay_depredadores():
-    print("No hay depredadores.")
+print("Fin Simulacion.")

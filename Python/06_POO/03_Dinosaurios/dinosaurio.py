@@ -89,7 +89,7 @@ class Dinosaurio:
         self.pos_x = max(self.pos_x, -200)
         self.pos_x = min(self.pos_x, 200)
         self.energia -= energia
-        if self.energia == 0:
+        if self.energia <= 0:
             self.morir()
 
     def morir(self):

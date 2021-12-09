@@ -20,7 +20,7 @@ class Cazador(Dinosaurio):
             self.desplazar(abs(distancia), DIR_IZQDA)
         else:
             self.desplazar(abs(distancia), DIR_DCHA)
-        self.energia -= 20
+        self.energia -= energia_necesaria
         presa.recibir_ataque(self)
 
     def recibir_ataque(self, depredador, prob_vivir):

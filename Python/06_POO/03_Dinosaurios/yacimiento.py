@@ -24,12 +24,12 @@ class Yacimiento:
         self.__dinosaurios.append(dinosaurio)
 
     def hay_cazadores(self):
-        hay_cazadores = False
+        hay_cazadores = True
         i = 0
-        while not hay_cazadores and i < len(self.dinosaurios):
+        while hay_cazadores and i < len(self.dinosaurios):
             d = self.dinosaurios[i]
             if d.vivo and type(d).__name__ in ["Rex", "Spinosaurus"]:
-                hay_cazadores = True
+                hay_cazadores = False
             i += 1
         return hay_cazadores
 

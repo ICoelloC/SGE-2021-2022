@@ -1,5 +1,5 @@
 from cazador import Cazador
-from constantes import POSIB_PRESA_SOLITARIO
+from constantes import POSIB_PRESA_SOLITARIO, ENERGIA_SPINO
 
 
 class Spinosaurio(Cazador):
@@ -9,7 +9,7 @@ class Spinosaurio(Cazador):
         super().__init__(id, energia, pos_x, False, True, aldea)
 
     def desplazar(self, distancia, direccion):
-        super().desplazar(distancia, direccion, 2)
+        super().desplazar(distancia, direccion, ENERGIA_SPINO)
 
     def recibir_ataque(self, depredador):
         super().recibir_ataque(depredador, POSIB_PRESA_SOLITARIO)

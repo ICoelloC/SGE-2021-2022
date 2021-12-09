@@ -1,5 +1,5 @@
 from cazador import Cazador
-from constantes import POSIB_PRESA_SOLITARIO
+from constantes import POSIB_PRESA_SOLITARIO, ENERGIA_TREX
 
 class Rex(Cazador):
     POSIB_ATAQUE = 60
@@ -7,7 +7,7 @@ class Rex(Cazador):
         super().__init__(id, energia, pos_x, False, True, aldea)
 
     def desplazar(self, distancia, direccion):
-        super().desplazar(distancia, direccion, 1)
+        super().desplazar(distancia, direccion, ENERGIA_TREX)
 
     def recibir_ataque(self, depredador):
         super().recibir_ataque(depredador, POSIB_PRESA_SOLITARIO)
