@@ -33,7 +33,6 @@ class Yacimiento:
             i += 1
         return depredadores
 
-    # Nos encargaremos de colocar a los dinosaurios según su posición en el yacimiento
     def ordenar_dinosaurios(self):
         self.__dinosaurios.sort(key=lambda dinosaurio: dinosaurio.pos_x)
 

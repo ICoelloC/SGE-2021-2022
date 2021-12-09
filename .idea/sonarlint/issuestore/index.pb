@@ -1,10 +1,6 @@
 
 [
 +Python/06_POO/02_FigurasGeometricas/cubo.py,0\3\0377b77a77ee65d87d599b9b23d05ef6aa3f2f97
-Å
-Q.idea/shelf/Uncommitted_changes_before_Checkout_at_30_11_2021_16_26__Changes_.xml,6\3\637e072a0e6bfdde96a400c3ff0dbbdc870ac28a
-Å
-Q.idea/shelf/Uncommitted_changes_before_Checkout_at_30_11_2021_16_22__Changes_.xml,6\2\62b577f85425cd04733332db81015db39982bace
 `
 0Python/06_POO/02_FigurasGeometricas/factorias.py,6\8\6899ae1e94ad08d65a3feccaefa4779e0f06c7b1
 _
@@ -43,23 +39,27 @@ V
 &Python/06_POO/01_GeneradorPass/main.py,4\c\4cc96e057cb94b2aa4efff2dbdbd921d51289215
 r
 BPython/05_ProgramacionEstructuradaModular/01_Alumnos/utilidades.py,d\8\d82a1746f4a7db883f90506eb1913f725bfa0d50
+Q
+!Python/06_POO/04_Neotokyo/main.py,e\9\e99a51e2358dc33ba7d5b622e52fe049d510e000
+d
+4Python/06_POO/04_Neotokyo/factorias/fact_patrulla.py,e\a\ea941492973bedc0ea8cd438c020e594063c6ad1
 Z
 *Python/06_POO/03_Dinosaurios/constantes.py,4\0\40c0d277a5194d9d76ed8a8f623199252b6d130d
-\
-,Python/06_POO/03_Dinosaurios/tiranosaurio.py,7\b\7b725db800cf9adaf829b881d4c298b4e467fc14
-[
-+Python/06_POO/03_Dinosaurios/spinosaurio.py,8\4\843a763c69ff0d3f9b72f5ef410afa469388d2f4
-[
-+Python/06_POO/03_Dinosaurios/triceratops.py,e\7\e75943cc32a8fd2b89f381b004a0f31261528509
 Z
 *Python/06_POO/03_Dinosaurios/depredador.py,3\6\3644c799c2259461023143977c486becc63e9fb7
-Y
-)Python/06_POO/03_Dinosaurios/factorias.py,a\1\a1b4999744fbebf0bee54c5ffb2cf5c9220549d5
-Z
-*Python/06_POO/03_Dinosaurios/yacimiento.py,c\6\c64f1ada99789583eddf09be8ffd77723f438ec7
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 Z
 *Python/06_POO/03_Dinosaurios/dinosaurio.py,c\a\ca5e9a3c3fcd2d6947eb944e637940eeed748217
+Y
+)Python/06_POO/03_Dinosaurios/factorias.py,a\1\a1b4999744fbebf0bee54c5ffb2cf5c9220549d5
+[
++Python/06_POO/03_Dinosaurios/spinosaurio.py,8\4\843a763c69ff0d3f9b72f5ef410afa469388d2f4
+\
+,Python/06_POO/03_Dinosaurios/tiranosaurio.py,7\b\7b725db800cf9adaf829b881d4c298b4e467fc14
+Z
+*Python/06_POO/03_Dinosaurios/yacimiento.py,c\6\c64f1ada99789583eddf09be8ffd77723f438ec7
+[
++Python/06_POO/03_Dinosaurios/triceratops.py,e\7\e75943cc32a8fd2b89f381b004a0f31261528509
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 T
 $Python/06_POO/03_Dinosaurios/main.py,a\b\ab3a44a82bdf65fa4ec148b9bae286703acae135

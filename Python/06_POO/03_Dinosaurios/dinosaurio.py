@@ -78,17 +78,14 @@ class Dinosaurio:
         self.__vivo = vivo
 
     def desplazar(self, distancia, direccion, energia):
-        """El personaje se desplaza una distancia en una dirección y consume una cantidad
-        de energía"""
         if not self.vivo:
-            raise ValueError("Personaje muerto. No se puede desplazar.")
+            raise ValueError("Dino muerto. No se puede desplazar.")
         if self.energia < energia * distancia:
             raise ValueError("Energía insuficiente. No se puede desplazar así.")
         if direccion == DIR_IZQDA:
             self.pos_x -= distancia
         else:
             self.pos_x += distancia
-        # Límite de la aldea (no se puede salir de la misma) -200 -> 200
         self.pos_x = max(self.pos_x, -200)
         self.pos_x = min(self.pos_x, 200)
         self.energia -= energia
@@ -96,21 +93,19 @@ class Dinosaurio:
             self.morir()
 
     def morir(self):
-        """El personaje muere"""
         self.energia = 0
         self.vivo = False
 
     def comer(self):
         if not self.vivo:
-            raise ValueError("Personaje muerto. No puede comer.")
+            raise ValueError("Dino muerto. No puede comer.")
         self.energia += ENERGIA_COMER
 
     def recibir_ataque(self, depredador, posibilidades_supervivencia):
         opcion = random.randint(0, 100)
         if opcion < posibilidades_supervivencia:
-            # Si gana la presa
             depredador.morir()
-        else:  # Si gana el depredador
+        else:
             self.morir()
 
     def elegir_accion(self, prob_ataque):
@@ -118,7 +113,7 @@ class Dinosaurio:
         opciones_restantes = 100 - prob_ataque
         if opcion < prob_ataque:
             return ATACAR
-        elif opcion < (opciones_restantes / 2):  # Nos queda comer y desplazarnos
+        elif opcion < (opciones_restantes / 2):
             return COMER
         else:
             return DESPLAZARSE

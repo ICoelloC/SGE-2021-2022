@@ -1,7 +1,7 @@
-from depredador import Depredador
+from cazador import Cazador
 from constantes import POSIB_PRESA_SOLITARIO
 
-class Rex(Depredador):
+class Rex(Cazador):
     POSIB_ATAQUE = 60
     def __init__(self, id, energia, pos_x, aldea):
         super().__init__(id, energia, pos_x, False, True, aldea)
