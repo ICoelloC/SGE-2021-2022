@@ -1,4 +1,4 @@
-from factorias import *
+from factorias import FactroriaYacimiento
 from constantes import *
 import random
 
@@ -24,7 +24,7 @@ def simular_dinosaurios(aldea):
             opcion = dinosaurio.elegir_accion()
             if opcion == ATACAR:
                 presa = elegir_dinosaurio_distinto(aldea, dinosaurio)
-                if presa != None:
+                if presa is not None:
                     print(dinosaurio.id + " ataca a " + presa.id)
                     dinosaurio.atacar(presa)
                 else:
@@ -44,13 +44,14 @@ def simular_dinosaurios(aldea):
                     dinosaurio.desplazar(unidades, DIR_IZQDA)
 
 
-
 yacimiento = FactroriaYacimiento.crear_mundo("Homer", 5, 2, 2)
-parar = "N"
-while (parar != "S" or parar != "s") and yacimiento.hay_depredadores():
+salir = False
+while not salir or yacimiento.hay_depredadores():
     print(yacimiento)
     simular_dinosaurios(yacimiento)
     parar = input("Desea parar (S/N): ")
+    if parar == "S" or parar == "s":
+        salir = True
 
 print(yacimiento)
 if not yacimiento.hay_depredadores():

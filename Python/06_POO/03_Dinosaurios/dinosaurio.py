@@ -88,8 +88,7 @@ class Dinosaurio:
             self.pos_x -= distancia
         else:
             self.pos_x += distancia
-
-        # No permitimos salirnos del límite -200, 200
+        # Límite de la aldea (no se puede salir de la misma) -200 -> 200
         self.pos_x = max(self.pos_x, -200)
         self.pos_x = min(self.pos_x, 200)
         self.energia -= energia
@@ -109,9 +108,9 @@ class Dinosaurio:
     def recibir_ataque(self, depredador, posibilidades_supervivencia):
         opcion = random.randint(0, 100)
         if opcion < posibilidades_supervivencia:
-            # Gana la presa, muere el atacante
+            # Si gana la presa
             depredador.morir()
-        else:  # Gana el depredador, muere la presa
+        else:  # Si gana el depredador
             self.morir()
 
     def elegir_accion(self, prob_ataque):
