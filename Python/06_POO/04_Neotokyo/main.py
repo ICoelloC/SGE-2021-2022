@@ -1,4 +1,6 @@
-from factorias import fact_patrulla as fp
+import factoria_neotokyo as fn
 
-patrulla = fp.crear_patrulla()
-registro = patrulla.ver_registro()
+if __name__ == '__main__':
+    patrulla = fn.crear_patrulla()
+    registro = patrulla.ver_registro()
+    print(registro)

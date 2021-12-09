@@ -5,19 +5,19 @@ class Persona:
 
     @property
     def nombre(self):
-        return self._nombre
+        return self.__nombre
 
     @nombre.setter
     def nombre(self, nombre):
-        self._nombre = nombre
+        self.__nombre = nombre
 
     @property
     def id(self):
-        return self._id
+        return self.__id
 
     @id.setter
     def id(self, id):
-        self._id = id
+        self.__id = id
 
     def __str__(self):
         clase = type(self).__name__

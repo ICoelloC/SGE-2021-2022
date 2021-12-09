@@ -9,19 +9,19 @@ class Policia(Persona):
 
     @property
     def n_placa(self):
-        return self._n_placa
+        return self.__n_placa
 
     @n_placa.setter
     def n_placa(self, n_placa):
-        self._n_placa = n_placa
+        self.__n_placa = n_placa
 
     @property
     def id_patrulla(self):
-        return self._id_patrulla
+        return self.__id_patrulla
 
     @id_patrulla.setter
     def id_patrulla(self, id_patrulla):
-        self._id_patrulla = id_patrulla
+        self.__id_patrulla = id_patrulla
 
     def __str__(self):
         clase = type(self).__name__
