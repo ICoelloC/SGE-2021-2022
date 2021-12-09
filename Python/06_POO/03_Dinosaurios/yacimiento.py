@@ -23,15 +23,15 @@ class Yacimiento:
     def add_dinosaurio(self, dinosaurio):
         self.__dinosaurios.append(dinosaurio)
 
-    def hay_depredadores(self):
-        depredadores = False
+    def hay_cazadores(self):
+        hay_cazadores = False
         i = 0
-        while not depredadores and i < len(self.dinosaurios):
+        while not hay_cazadores and i < len(self.dinosaurios):
             d = self.dinosaurios[i]
             if d.vivo and type(d).__name__ in ["Rex", "Spinosaurus"]:
-                depredadores = True
+                hay_cazadores = True
             i += 1
-        return depredadores
+        return hay_cazadores
 
     def ordenar_dinosaurios(self):
         self.__dinosaurios.sort(key=lambda dinosaurio: dinosaurio.pos_x)
