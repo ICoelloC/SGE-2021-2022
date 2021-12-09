@@ -1,6 +1,5 @@
 from triangulo import Triangulo
 
-
 def pedir_entero(mensaje):
     correcto = False
     num = 0

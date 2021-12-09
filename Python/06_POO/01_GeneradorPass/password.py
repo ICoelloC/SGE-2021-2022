@@ -1,7 +1,7 @@
 from random import choice
 
 
-class Pass():
+class Pass:
     def __init__(self, long=8):
         self.longitud = long
         self.generador_pass()
@@ -16,7 +16,8 @@ class Pass():
             self.__longitud = long
         else:
             self.__longitud = 8
-            raise ValueError("La longitud tiene que ser positiva mayor que cero")
+            raise ValueError(
+                "La longitud tiene que ser positiva mayor que cero")
 
     @property
     def valor(self):
@@ -30,7 +31,7 @@ class Pass():
 
     def generador_pass(self):
         valores = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ<=>@#%&+"
-        self.__valor = "";
+        self.__valor = ""
         for _ in range(self.longitud):
             self.__valor += choice(valores)
 
@@ -49,4 +50,4 @@ class Pass():
                 nmays += 1
             elif a in num:
                 nnums += 1
-        return nmays > 2 and nmins > 1 and nnums > 5
+        return nmays >= 2 and nmins >= 1 and nnums >= 5

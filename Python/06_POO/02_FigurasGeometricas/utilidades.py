@@ -1,10 +1,11 @@
 import msvcrt
 import os
 
+
 def pedir_entero(mensaje):
     correcto = False
     num = 0
-    while(not correcto):
+    while not correcto:
         try:
             num = int(input(mensaje))
             correcto = True
@@ -14,7 +15,7 @@ def pedir_entero(mensaje):
     return num
 
 
-borrar_pantalla = lambda: os.system ("cls")
+borrar_pantalla = lambda: os.system("cls")
 
 
 def esperar_tecla():

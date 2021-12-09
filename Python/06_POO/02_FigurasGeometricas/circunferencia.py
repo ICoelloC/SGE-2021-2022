@@ -1,7 +1,7 @@
 import math
 
 
-class Circunferencia():
+class Circunferencia:
     def __init__(self, radio):
         self.radio = radio
 

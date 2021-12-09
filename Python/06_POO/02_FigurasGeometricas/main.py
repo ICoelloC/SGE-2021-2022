@@ -39,4 +39,5 @@ def menu():
             print("Perímetro: {0}\nArea: {1}".format(figura.perimetro(), figura.area()))
             utilidades.esperar_tecla()
 
+
 menu()

@@ -1,7 +1,7 @@
 from rectangulo import Rectangulo
 
 
-class Cubo():
+class Cubo:
     def __init__(self, lado):
         self.cara = Rectangulo(lado, lado)
 

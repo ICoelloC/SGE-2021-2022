@@ -2,7 +2,7 @@ from circunferencia import Circunferencia
 import math
 
 
-class Cono():
+class Cono:
     def __init__(self, radio, generatriz):
         self.circunferencia = Circunferencia(radio)
         self.generatriz = generatriz
