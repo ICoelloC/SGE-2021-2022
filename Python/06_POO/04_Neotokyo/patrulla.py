@@ -1,39 +1,34 @@
-from policia import Policia
-from jefe_patrulla import JefePatrulla
-
-
 class Patrulla:
-    def __init__(self, id_patrulla, jefe, policias):
-        self.id_patrulla = id_patrulla
-        self.jefe = jefe
-        self.policias = policias
+    def __init__(self, n_patrulla, c_patrulla, c_policias):
+        if len(c_policias) < 4:
+            raise ValueError("El número de policías debe >= 4")
+        self.coordinador_patrulla = c_patrulla
+        self.ciberpolicias = c_policias
+        self.id_patrulla = n_patrulla
+
+    @property
+    def coordinador_patrulla(self):
+        return self.__coordinador_patrulla
+
+    @coordinador_patrulla.setter
+    def coordinador_patrulla(self, c_patrulla):
+        self.__coordinador_patrulla = c_patrulla
+
+    @property
+    def ciberpolicias(self):
+        return self.__ciberpolicias
+
+    @ciberpolicias.setter
+    def ciberpolicias(self, c_policias):
+        self.__ciberpolicias = c_policias
 
     @property
     def id_patrulla(self):
         return self.__id_patrulla
 
     @id_patrulla.setter
-    def id_patrulla(self, id_patrulla):
-        self.__id_patrulla = id_patrulla
+    def id_patrulla(self, n_patrulla):
+        self.__id_patrulla = n_patrulla
 
-    @property
-    def jefe(self):
-        return self.__jefe
-
-    @jefe.setter
-    def jefe(self, jefe):
-        self.__jefe = jefe
-
-    @property
-    def policias(self):
-        return self.__policias
-
-    @policias.setter
-    def policias(self, policias):
-        self.__policias = policias
-
-    def add_policia(self, policia):
-        self.policias.append(policia)
-
-    def ver_registro(self):
-        return self.jefe.ver_registro()
+    def get_registro(self):
+        return self.coordinador_patrulla.get_registro()

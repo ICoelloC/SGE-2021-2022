@@ -1,9 +1,9 @@
 from persona import Persona
 
 
-class Policia(Persona):
-    def __init__(self, id, nombre, n_placa, id_patrulla):
-        super().__init__(id, nombre)
+class Ciberpolicia(Persona):
+    def __init__(self, id_persona, nombre, n_placa, id_patrulla):
+        super().__init__(id_persona, nombre)
         self.n_placa = n_placa
         self.id_patrulla = id_patrulla
 

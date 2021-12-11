@@ -1,10 +1,10 @@
-def pedir_entero(msg):
+def pedir_entero(mensaje):
     correcto = False
-    valor = 0
+    num = 0
     while not correcto:
         try:
-            valor = int(input(msg))
+            num = int(input(mensaje))
             correcto = True
         except ValueError:
-            print("El valor de " + msg + " debe ser numérico entero")
-    return valor
+            print('Error, introduce un numero entero')
+    return num

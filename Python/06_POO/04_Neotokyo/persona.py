@@ -1,7 +1,15 @@
 class Persona:
-    def __init__(self, id, nombre):
+    def __init__(self, id_persona, nombre):
+        self.id_persona = id_persona
         self.nombre = nombre
-        self.id = id
+
+    @property
+    def id_persona(self):
+        return self.__id_persona
+
+    @id_persona.setter
+    def id_persona(self, id_persona):
+        self.__id_persona = id_persona
 
     @property
     def nombre(self):
@@ -11,15 +19,7 @@ class Persona:
     def nombre(self, nombre):
         self.__nombre = nombre
 
-    @property
-    def id(self):
-        return self.__id
-
-    @id.setter
-    def id(self, id):
-        self.__id = id
-
     def __str__(self):
         clase = type(self).__name__
-        msg = '{0} -> ID: {1}, Nombre: {2}'
-        return msg.format(clase, self.id, self.nombre)
+        msg = "{0} => ID: {1}, Nombre: {2}"
+        return msg.format(clase, self.id_persona, self.nombre)
