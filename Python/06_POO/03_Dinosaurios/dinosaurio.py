@@ -1,4 +1,3 @@
-# coding=utf-8
 from Constantes import *
 import random
 
