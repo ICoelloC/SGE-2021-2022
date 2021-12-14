@@ -1,0 +1,5 @@
+
+fpython:S2208"GImport only needed names or import the module and then use its members.(ÍµŠ‰8®ƒÎ¨Û/
+Cpython:S2638"Add missing parameters energia.(®èõıüÿÿÿÿ8¯ƒÎ¨Û/
+Rpython:S2638"3Add missing parameters posibilidades_supervivencia.(°¢êš8°ƒÎ¨Û/
+Bpython:S2638"#Add missing parameters prob_ataque.(–¨‹İ8°ƒÎ¨Û/
