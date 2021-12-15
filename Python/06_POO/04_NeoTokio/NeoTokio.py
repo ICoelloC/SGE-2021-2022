@@ -6,4 +6,4 @@ from Utilidades.Utilidades import Utilidades
 
 patrulla = FactoriaPatrulla.crear_patrulla()
 registro = patrulla.get_registro()
-Utilidades.grabarJSON(registro)
+Utilidades.grabar_json(registro)

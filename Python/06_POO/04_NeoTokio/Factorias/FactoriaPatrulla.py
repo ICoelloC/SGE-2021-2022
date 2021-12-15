@@ -27,6 +27,6 @@ class FactoriaPatrulla:
     @staticmethod
     def crear_ciberpolicias(id):
         """Crea la lista de ciberpolicias que formarán una patrulla"""
-        nPolicias = Utilidades.get_entero("Número de ciberpolicías: ")
-        return [FactoriaPolicia.crear_policia(id) for _ in range(nPolicias)]
+        num_policias = Utilidades.get_entero("Número de ciberpolicías: ")
+        return [FactoriaPolicia.crear_policia(id) for _ in range(num_policias)]
 
