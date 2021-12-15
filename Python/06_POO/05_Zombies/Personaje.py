@@ -10,10 +10,7 @@ class Personaje():
         self.pos_x = pos_x
         self.pueblo = pueblo
         self.perseguidores = []
-        if self.energia > 0:
-            self.vivo = True
-        else:
-            self.vivo = False
+        self.vivo = self.energia > 0
 
     @property
     def id(self):

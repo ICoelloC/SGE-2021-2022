@@ -83,7 +83,7 @@ class Pueblo:
             if personaje.pos_x == pos_x and type(personaje).__name__ == faccion:
                 personajes.append(personaje)
             pos = personaje.pos_x
-            n_personaje += 1
+            n_personaje += 1    
         return personajes
 
     def __str__(self):
