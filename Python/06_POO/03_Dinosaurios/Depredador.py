@@ -16,8 +16,7 @@ class Depredador(Dinosaurio):
         distancia = self.pos_x - presa.pos_x
         energia_necesaria = abs(distancia) * 2 + ENERGIA_ATACAR
         if self.energia < energia_necesaria:
-            raise ValueError("No puede atacar. Energía insuficiente. Necesita: " +
-                             energia_necesaria + ", Tiene: " + self.energia)
+            raise ValueError("No puede atacar. Energía insuficiente. Necesita: " + energia_necesaria + ", Tiene: " + self.energia)
 
         if distancia < 0:  # Nos desplazamos a la izquierda
             self.desplazar(abs(distancia), DIR_IZQDA)
