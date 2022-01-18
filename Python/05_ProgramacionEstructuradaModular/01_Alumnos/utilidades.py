@@ -43,9 +43,7 @@ def buscar_alumno(dicc, **kwargs):
         alumno_buscado = True
         for dni, alumno_dict in dicc.items():
             for name, value in kwargs.items():
-                print(name)
-                print(value)
-                if alumno_buscado and value != "" and alumno_dict[name] != value:
+                if alumno_buscado and value != "" and str(alumno_dict[name]) != value:
                     alumno_buscado = False
             if alumno_buscado:
                 resultado_busqueda.append({dni: alumno_dict})
